@@ -1,9 +1,6 @@
 name: Mainline
 
 on:
-  push:
-    ignore-branches:
-      - master
   pull_request:
     branches:
       - master
