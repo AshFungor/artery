@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y        \
     bison build-essential flex git python3-dev  \
     libxml2-dev wget zlib1g-dev cmake           \
     libboost-all-dev libcrypto++-dev            \
-    libfox-dev libgdal-dev libproj-dev          \
+    libfox-1.6-dev libgdal-dev libproj-dev      \
     libgeographiclib-dev libxerces-c-dev        \
     ninja-build curl python3-venv               \
     && rm -rf /var/lib/apt/lists/*

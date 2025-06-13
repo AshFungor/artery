@@ -4,7 +4,7 @@ on:
   workflow_call:
 
 jobs:
-  build-or-load:
+  build-docker-image:
     runs-on: ubuntu-latest
 
     steps:
