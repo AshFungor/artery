@@ -22,12 +22,9 @@ jobs:
           fetch-depth: 0
 
       - name: Configure CMake
-        run: /workspace/tools/build.py -cl
+        run: tools/build.py -cl
 
       - name: Run clang-tidy
         continue-on-error: true
         run: |
-          python3 clang-tidy-diff.py      \
-          -p1                             \
-          -path .                         \
-          < <(git diff -U0 origin/master)
+          clang-tidy-diff.py -p1 -path . < <(git diff -U0 origin/master)
