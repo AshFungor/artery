@@ -2,7 +2,9 @@ name: Lint Check
 
 on:
   workflow_call:
-    null
+    secrets:
+      token:
+        required: true
 
 jobs:
   clang-tidy:
@@ -11,7 +13,7 @@ jobs:
       image: artery/runner:latest
       credentials:
         username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+        password: ${{ secrets.token }}
 
     steps:
       - uses: actions/checkout@v4
