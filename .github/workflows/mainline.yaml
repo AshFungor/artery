@@ -11,6 +11,8 @@ on:
 jobs:
   prepare:
     uses: ./.github/workflows/prepare.yaml
+    secrets:
+      token: ${{ secrets.PACKAGE_TOKEN }}
 
   lint:
     needs: prepare
