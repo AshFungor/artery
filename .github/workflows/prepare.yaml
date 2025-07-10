@@ -25,6 +25,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/AshFungor/runner:latest
+          tags: ghcr.io/ashfungor/runner:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
