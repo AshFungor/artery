@@ -8,17 +8,11 @@ on:
 jobs:
   prepare:
     uses: ./.github/workflows/prepare.yaml
-    permissions:
-      packages: write
-
+    
   lint:
     needs: prepare
     uses: ./.github/workflows/lint.yaml
-    permissions:
-      packages: read
 
   test:
     needs: prepare
     uses: ./.github/workflows/test.yaml
-    permissions:
-      packages: read
