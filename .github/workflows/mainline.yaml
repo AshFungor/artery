@@ -5,20 +5,20 @@ on:
     branches:
       - master
 
-permissions:
-  packages: write
-
 jobs:
   prepare:
     uses: ./.github/workflows/prepare.yaml
-    secrets: inherit
+    permissions:
+      packages: write
 
   lint:
     needs: prepare
     uses: ./.github/workflows/lint.yaml
-    secrets: inherit
+    permissions:
+      packages: read
 
   test:
     needs: prepare
     uses: ./.github/workflows/test.yaml
-    secrets: inherit
+    permissions:
+      packages: read
