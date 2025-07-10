@@ -5,12 +5,13 @@ on:
     branches:
       - master
 
+permissions:
+  packages: write
+
 jobs:
   prepare:
     uses: ./.github/workflows/prepare.yaml
     secrets: inherit
-    permissions:
-      packages: write
 
   lint:
     needs: prepare
