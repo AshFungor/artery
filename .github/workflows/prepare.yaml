@@ -3,12 +3,11 @@ name: Prepare environment
 on:
   workflow_call:
 
-permissions:
-  packages: write
-
 jobs:
   build-docker-image:
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
 
     steps:
       - name: Log in to GHCR
