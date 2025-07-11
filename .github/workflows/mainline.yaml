@@ -8,6 +8,8 @@ on:
 jobs:
   prepare:
     uses: ./.github/workflows/prepare.yaml
+    permissions:
+      packages: write
     
   lint:
     needs: prepare
