@@ -54,8 +54,8 @@ SHELL [ "/bin/bash", "-c"]
 
 # COPY --from=build /sumo-prefix/ /usr/local
 
-RUN cd /usr/local/bin && \
-    curl -sSL -O https://raw.githubusercontent.com/llvm/llvm-project/main/clang-tools-extra/clang-tidy/tool/clang-tidy-diff.py
+# RUN cd /usr/local/bin && \
+#     curl -sSL -O https://raw.githubusercontent.com/llvm/llvm-project/main/clang-tools-extra/clang-tidy/tool/clang-tidy-diff.py
 
-ENV PATH=/omnetpp/bin:$PATH
-ENV SUMO_HOME=/usr/local/share/sumo
+# ENV PATH=/omnetpp/bin:$PATH
+# ENV SUMO_HOME=/usr/local/share/sumo
